@@ -1,6 +1,6 @@
 streamlit
 duckdb
 langchain_openai
-langchain_chroma==0.2.5
+faiss-cpu
 langchain_core
 langchain
