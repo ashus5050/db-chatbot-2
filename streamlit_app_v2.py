@@ -247,6 +247,8 @@ if OPENAI_API_KEY:
             
             for i in table_path_mapping:
                 sql_query = sql_query.replace(i[0],i[1])
+
+            print("--------------",sql_query,"--------------")
             
             result_df = duckdb.query(sql_query).to_df()
             
@@ -292,6 +294,7 @@ if OPENAI_API_KEY:
 
 else:
     st.warning("Please enter your API token to continue.")
+
 
 
 
