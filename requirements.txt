@@ -1,0 +1,6 @@
+streamlit
+duckdb
+langchain_openai
+langchain_chroma
+langchain_core
+langchain
