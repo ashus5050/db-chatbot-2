@@ -89,7 +89,7 @@ if OPENAI_API_KEY:
     
     table_path_mapping = list()
     for table_name, table_info in metadata_json.items():
-        table_path_mapping.append([table_name,'"'+db_path+'\\'+table_name.split('.')[1]+'.csv"'])
+        table_path_mapping.append([table_name,'"'+db_path+'/'+table_name.split('.')[1]+'.csv"'])
     
     ###################################################
     
@@ -294,6 +294,7 @@ if OPENAI_API_KEY:
 
 else:
     st.warning("Please enter your API token to continue.")
+
 
 
 
