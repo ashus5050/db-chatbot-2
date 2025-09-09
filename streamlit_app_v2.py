@@ -94,7 +94,7 @@ if OPENAI_API_KEY:
     
     ###################################################
     
-    df = pd.read_csv(good_known_queries_21_)
+    df = pd.read_csv("good_known_queries/sample_queries.csv")
     
     good_known_queries = df[['question', 'sql_query']].to_dict('records')
     
@@ -293,4 +293,5 @@ if OPENAI_API_KEY:
 
 else:
     st.warning("Please enter your API token to continue.")
+
 
