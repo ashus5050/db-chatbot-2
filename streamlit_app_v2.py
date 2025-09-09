@@ -106,7 +106,7 @@ if OPENAI_API_KEY:
     
     ###################################################
     
-    llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo", openai_api_key=os.getenv('OPENAI_API_KEY'))
+    llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo", openai_api_key=OPENAI_API_KEY)
 
     # Function to generate a fun bot reply (simulated streaming generator)
     def response_generator(user_text):
@@ -292,6 +292,7 @@ if OPENAI_API_KEY:
 
 else:
     st.warning("Please enter your API token to continue.")
+
 
 
 
