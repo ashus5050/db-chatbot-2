@@ -1,0 +1,643 @@
+{
+  "dbo.customer_metadata_sample": {
+    "table_description": "Contains information about the customers",
+    "column_count": 5,
+    "columns": [
+      {
+        "name": "customer_id",
+        "column_description": "Unique identifier for each customer",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "NO",
+        "default": null
+      },
+      {
+        "name": "customer_name",
+        "column_description": "Name of the customer",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "industry",
+        "column_description": "Industry the customer belongs to",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "customer_tier",
+        "column_description": "Tier of the customer (e.g., 'Enterprise', 'SME')",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "contact_email",
+        "column_description": "Primary contact email of the customer",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      }
+    ],
+    "primary_keys": [
+      "customer_id"
+    ],
+    "foreign_keys": []
+  },
+  "dbo.inventory_metadata_sample": {
+    "table_description": "Tracks current stock levels of products in various warehouses",
+    "column_count": 6,
+    "columns": [
+      {
+        "name": "inventory_id",
+        "column_description": "Unique identifier for each inventory record",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "NO",
+        "default": null
+      },
+      {
+        "name": "product_id",
+        "column_description": "ID of the product in this inventory record",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "warehouse_id",
+        "column_description": "ID of the specific warehouse where stock is held",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "current_stock",
+        "column_description": "Current quantity of the product in stock",
+        "data_type": "bigint",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "last_updated_date",
+        "column_description": "Date when the stock level was last updated",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "reorder_point",
+        "column_description": "The stock level at which a new order should be placed",
+        "data_type": "bigint",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      }
+    ],
+    "primary_keys": [
+      "inventory_id"
+    ],
+    "foreign_keys": [
+      "product_id"
+    ]
+  },
+  "dbo.product_metadata_sample": {
+    "table_description": "Details about the various products in the inventory",
+    "column_count": 13,
+    "columns": [
+      {
+        "name": "product_id",
+        "column_description": "Unique identifier for each product",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "NO",
+        "default": null
+      },
+      {
+        "name": "product_name",
+        "column_description": "Name of the product",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "category",
+        "column_description": "Broad product category (e.g., Chemicals, Electronics)",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "sub_category",
+        "column_description": "More specific product sub-category (e.g., Solvents)",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "unit_of_measure",
+        "column_description": "Unit in which the product is measured (e.g., kg, units)",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "standard_cost",
+        "column_description": "Standard cost of the product ",
+        "data_type": "float",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "selling_price",
+        "column_description": "Selling price of the product ",
+        "data_type": "float",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "weight_kg",
+        "column_description": "Weight of one unit of product in kilograms",
+        "data_type": "float",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "volume_m3",
+        "column_description": "Volume of one unit of product in cubic meters ",
+        "data_type": "float",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "lifecycle_stage",
+        "column_description": "Stage in the product's lifecycle (e.g., 'Growth')",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "criticality_level",
+        "column_description": "Impact of a stock-out (e.g., 'High', 'Medium', 'Low')",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "minimum_stock_level",
+        "column_description": "Reorder point for inventory planning",
+        "data_type": "bigint",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "lead_time_days",
+        "column_description": "Standard procurement lead time in days",
+        "data_type": "bigint",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      }
+    ],
+    "primary_keys": [
+      "product_id"
+    ],
+    "foreign_keys": []
+  },
+  "dbo.region_metadata_sample": {
+    "table_description": "Stores information about the operational regions",
+    "column_count": 9,
+    "columns": [
+      {
+        "name": "region_id",
+        "column_description": "Unique identifier for each region",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "NO",
+        "default": null
+      },
+      {
+        "name": "region_name",
+        "column_description": "Common name of the region (e.g., North India) ",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "country",
+        "column_description": "Country where the region is located",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "state_province",
+        "column_description": "Specific state or province within the country",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "city_hub",
+        "column_description": "Main logistics hub city in the region/state",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "avg_transit_time_days",
+        "column_description": "Average time for inter-state/regional transport in days",
+        "data_type": "float",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "infrastructure_index",
+        "column_description": "Index from 1-10 (10 being best) for infrastructure quality",
+        "data_type": "bigint",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "economic_impact_score",
+        "column_description": "Score from 1-10 (10 being high revenue/criticality)",
+        "data_type": "bigint",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "seasonal_risk_factor",
+        "column_description": "Factor for increased risk during specific seasons (e.g., monsoon)",
+        "data_type": "float",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      }
+    ],
+    "primary_keys": [
+      "region_id"
+    ],
+    "foreign_keys": []
+  },
+  "dbo.orders_metadata_sample": {
+    "table_description": "Records details of customer orders and their delivery status",
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "order_id",
+        "column_description": "Unique identifier for each order",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "NO",
+        "default": null
+      },
+      {
+        "name": "customer_id",
+        "column_description": "ID of the customer who placed the order",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "order_date",
+        "column_description": "Date the order was placed ",
+        "data_type": "date",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "promised_delivery_date",
+        "column_description": "Date by which delivery was promised    ",
+        "data_type": "date",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "actual_delivery_date",
+        "column_description": "Actual date the order was delivered  ",
+        "data_type": "date",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "supplier_id",
+        "column_description": "ID of the supplier handling the order ",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "shipping_region_id",
+        "column_description": "ID of the region where the order is to be delivered",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "product_id",
+        "column_description": "ID of the product ordered ",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "ordered_quantity",
+        "column_description": "Quantity of the product ordered   ",
+        "data_type": "integer",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "delivered_quantity",
+        "column_description": "Quantity of the product actually delivered",
+        "data_type": "integer",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "delivery_status",
+        "column_description": "Current status of the delivery ",
+        "data_type": "varchar",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "delay_reason",
+        "column_description": "Reason for delay if delivery is not on time ",
+        "data_type": "varchar",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "tracking_id",
+        "column_description": "External tracking ID for the shipment",
+        "data_type": "varchar",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "is_on_time",
+        "column_description": "Indicates if the delivery was on or before promised date",
+        "data_type": "bit",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "is_in_full ",
+        "column_description": "Indicates if the ordered quantity was fully delivered",
+        "data_type": "bit",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      }
+    ],
+    "primary_keys": [
+      "order_id"
+    ],
+    "foreign_keys": [
+      "customer_id",
+      "supplier_id",
+      "shipping_region_id",
+      "product_id"
+    ]
+  },
+  "dbo.supplier_metadata_sample": {
+    "table_description": "Contains details about the various suppliers",
+    "column_count": 15,
+    "columns": [
+      {
+        "name": "supplier_id",
+        "column_description": "Unique identifier for each supplier",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "NO",
+        "default": null
+      },
+      {
+        "name": "supplier_name",
+        "column_description": "Name of the supplier ",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "contact_person",
+        "column_description": "Main contact person at the supplier",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "email",
+        "column_description": "Contact email of the supplier ",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "phone",
+        "column_description": "Contact phone number ",
+        "data_type": "bigint",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "head_office_city",
+        "column_description": "City where the supplier's head office is located",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "primary_region_id",
+        "column_description": "ID of the main operational region for the supplier",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "contract_start_date",
+        "column_description": "Date when the contract with the supplier began",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "contract_end_date",
+        "column_description": "Date when the contract with the supplier ends",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "service_level_agreement_otif",
+        "column_description": "Contractually agreed On-Time In-Full (OTIF) percentage target",
+        "data_type": "float",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "avg_otif_qtr_current",
+        "column_description": "Average OTIF performance for the current quarter",
+        "data_type": "float",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "avg_otif_qtr_prev",
+        "column_description": "Average OTIF performance for the previous quarter",
+        "data_type": "float",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "risk_score",
+        "column_description": "Risk score from 1-10 (10 being high risk, e.g., financial stability)",
+        "data_type": "bigint",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "tier",
+        "column_description": "Supplier tier (e.g., 'Tier 1 Strategic', 'Tier 3 Backup')",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "is_active",
+        "column_description": "Indicates if the supplier is currently active",
+        "data_type": "bit",
+        "max_length": null,
+        "is_nullable": "YES",
+        "default": null
+      }
+    ],
+    "primary_keys": [
+      "supplier_id"
+    ],
+    "foreign_keys": [
+      "primary_region_id"
+    ]
+  },
+  "dbo.weather_event_metadata_sample": {
+    "table_description": "Records significant weather events that could impact logistics",
+    "column_count": 7,
+    "columns": [
+      {
+        "name": "event_id",
+        "column_description": "Unique identifier for each weather event",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "NO",
+        "default": null
+      },
+      {
+        "name": "region_id",
+        "column_description": "ID of the region affected by the weather event",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "event_type",
+        "column_description": "Type of weather event (e.g., 'Heavy Rainfall', 'Cyclone')",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "start_date",
+        "column_description": "Datewhen the weather event began",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "end_date",
+        "column_description": "Date when the weather event ended (or is projected to end)",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "severity",
+        "column_description": "Severity of the event ('Low', 'Medium', 'High')",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      },
+      {
+        "name": "impact_description",
+        "column_description": "Detailed description of the event's impact",
+        "data_type": "varchar",
+        "max_length": -1,
+        "is_nullable": "YES",
+        "default": null
+      }
+    ],
+    "primary_keys": [
+      "event_id"
+    ],
+    "foreign_keys": [
+      "region_id"
+    ]
+  }
+}
