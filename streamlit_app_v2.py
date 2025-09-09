@@ -16,7 +16,6 @@ from langchain_core.example_selectors import SemanticSimilarityExampleSelector
 
 # Ask for API token securely
 OPENAI_API_KEY = st.text_input("Your API Token", type="password")
-embedding = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 
 def load_metadata(metadata_path):
     
@@ -38,7 +37,7 @@ def load_metadata(metadata_path):
     
 # Only proceed if API token is provided
 if OPENAI_API_KEY:
-
+    embedding = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
     st.markdown(
         """
         <style>
@@ -293,5 +292,6 @@ if OPENAI_API_KEY:
 
 else:
     st.warning("Please enter your API token to continue.")
+
 
 
