@@ -1,0 +1,21 @@
+product_id,product_name,category,sub_category,unit_of_measure,standard_cost,selling_price,weight_kg,volume_m3,lifecycle_stage,criticality_level,minimum_stock_level,lead_time_days
+PRD001,High-Purity Chemical X,Chemicals,Solvents,kg,1500.0,2250.0,25.0,0.02,Maturity,High,100,15
+PRD002,Precision Bearing Kit,Manufacturing Parts,Bearings,units,500.0,750.0,2.5,0.005,Growth,Medium,500,10
+PRD003,Integrated Circuit Y,Electronics,Semiconductors,units,1200.0,1800.0,0.1,0.0001,Growth,High,200,25
+PRD004,Generic Fasteners,Manufacturing Parts,Fasteners,units,10.0,15.0,0.01,1e-05,Maturity,Low,5000,7
+PRD005,Pharmaceutical Excipient,Pharmaceuticals,Raw Materials,kg,2500.0,3750.0,10.0,0.01,Maturity,High,50,20
+PRD006,Custom Metal Alloy,Raw Materials,Metals,kg,3000.0,4500.0,100.0,0.05,Launch,High,20,30
+PRD007,Optical Sensor Array,Electronics,Sensors,units,800.0,1200.0,0.05,5e-05,Growth,Medium,150,18
+PRD008,Polymer Resin Z,Chemicals,Polymers,kg,750.0,1125.0,50.0,0.04,Maturity,Medium,200,12
+PRD009,Specialized Valve,Manufacturing Parts,Valves,units,900.0,1350.0,5.0,0.008,Maturity,High,75,14
+PRD010,Packaging Film Rolls,Packaging Materials,Films,rolls,80.0,120.0,15.0,0.03,Maturity,Low,1000,8
+PRD011,Automotive ECU,Electronics,Control Units,units,2000.0,3000.0,0.5,0.001,Growth,High,80,22
+PRD012,Bio-Active Compound,Pharmaceuticals,API,kg,5000.0,7500.0,1.0,0.001,Launch,High,10,30
+PRD013,Standard Pump Assembly,Manufacturing Parts,Pumps,units,1500.0,2250.0,10.0,0.02,Maturity,Medium,120,10
+PRD014,Industrial Lubricant,Chemicals,Lubricants,liters,200.0,300.0,20.0,0.025,Maturity,Low,300,9
+PRD015,Rare Earth Magnet,Raw Materials,Magnets,kg,1800.0,2700.0,0.2,0.0002,Growth,High,30,28
+PRD016,Precision Gear Set,Manufacturing Parts,Gears,units,600.0,900.0,1.5,0.003,Growth,Medium,180,11
+PRD017,Industrial Solenoid,Electronics,Electromechanical,units,300.0,450.0,0.3,0.0003,Maturity,Medium,250,13
+PRD018,Specialty Adhesive,Chemicals,Adhesives,kg,400.0,600.0,5.0,0.006,Maturity,Low,400,10
+PRD019,Medical Device Housing,Manufacturing Parts,Casings,units,700.0,1050.0,0.8,0.002,Growth,High,60,17
+PRD020,High Performance Fiber,Raw Materials,Fibers,kg,2200.0,3300.0,5.0,0.007,Launch,High,25,26

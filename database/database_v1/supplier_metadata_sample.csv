@@ -1,0 +1,13 @@
+supplier_id,supplier_name,contact_person,email,phone,head_office_city,primary_region_id,contract_start_date,contract_end_date,service_level_agreement_otif,avg_otif_qtr_current,avg_otif_qtr_prev,risk_score,tier,is_active
+SUP001,LogiTrans India,Anil Sharma,anil.s@logi.com,+919876543210,Delhi,REG001,2022-01-15,2026-12-31,92.0,78.5,85.2,8,Tier 2 Standard,TRUE
+SUP002,Global Freight Corp,Priya Singh,priya.s@global.com,+919988776655,Mumbai,REG002,2021-06-20,2027-06-30,95.0,93.1,94.8,3,Tier 1 Strategic,TRUE
+SUP003,QuickRoute Logistics,Rajeev Gupta,rajeev.g@quick.com,+918765432109,Gurgaon,REG001,2023-03-01,2025-09-30,90.0,72.3,80.5,7,Tier 2 Standard,TRUE
+SUP004,Reliable Transports,Ramesh Kumar,ramesh.k@reliable.com,+917654321098,Chennai,REG003,2020-09-01,2028-03-15,93.0,91.5,92.1,2,Tier 1 Strategic,TRUE
+SUP005,Backup Logistics Pvt,Deepa Nair,deepa.n@backup.com,+919012345678,Kolkata,REG004,2023-11-01,2026-01-31,88.0,86.0,87.5,5,Tier 3 Backup,TRUE
+SUP006,Speedy Deliveries,Alok Das,alok.d@speedy.com,+919345678901,Hyderabad,REG003,2022-04-01,2027-04-01,91.0,89.5,90.1,4,Tier 2 Standard,TRUE
+SUP007,Apex Carriers,Vishal Mehta,vishal.m@apex.com,+919456789012,Delhi,REG001,2024-01-01,2026-07-01,89.0,88.0,NA,6,Tier 3 Backup,TRUE
+SUP008,Eastern Freight,Sunita Devi,sunita.d@eastern.com,+919567890123,Guwahati,REG006,2023-05-10,2025-11-30,85.0,81.0,83.0,7,Tier 3 Backup,TRUE
+SUP009,Asia Connect Logistics,Michael Lee,michael.l@asiaconnect.com,+6581234567,Singapore,REG007,2020-01-01,2029-01-01,98.0,97.5,98.0,1,Tier 1 Strategic,TRUE
+SUP010,Desert Express,Ahmed Khan,ahmed.k@desert.com,+971501234567,Dubai,REG008,2021-03-01,2028-03-01,96.0,95.0,95.5,2,Tier 1 Strategic,TRUE
+SUP011,TransGlobal USA,John Smith,john.s@transglobal.com,+12135550101,Los Angeles,REG009,2019-07-01,2029-07-01,94.0,93.0,93.5,3,Tier 1 Strategic,TRUE
+SUP012,EuroCargo Solutions,Lena Schmidt,lena.s@eurocargo.com,+4917612345678,Munich,REG010,2020-04-01,2028-04-01,95.0,94.0,94.5,2,Tier 1 Strategic,TRUE

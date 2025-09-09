@@ -1,0 +1,7 @@
+event_id,region_id,event_type,start_date,end_date,severity,impact_description
+WEA001,REG001,Heavy Rainfall,2025-07-05,2025-07-10,High,"Widespread flooding, major road closures in Uttar Pradesh"
+WEA002,REG001,Heavy Rainfall,2025-07-18,2025-07-23,Medium,"Localized flooding, minor road disruptions"
+WEA003,REG004,Cyclone Impact,2025-06-25,2025-06-28,High,"Strong winds, port closures in Kolkata"
+WEA004,REG005,Extreme Heatwave,2025-05-10,2025-05-15,Medium,"Increased risk of vehicle breakdowns, reduced delivery speeds"
+WEA005,REG006,Landslides,2025-07-10,2025-07-14,High,"Highway blockages, isolated regional cuts"
+WEA006,REG002,Heavy Rainfall,2025-07-01,2025-07-03,Low,"Minor delays, isolated traffic jams"

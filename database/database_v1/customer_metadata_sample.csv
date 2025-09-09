@@ -1,0 +1,51 @@
+customer_id,customer_name,industry,customer_tier,contact_email
+CUST001,Global Manufacturing Co,Manufacturing,Enterprise,gmco@example.com
+CUST002,Pharma Innovations Inc,Pharmaceuticals,Enterprise,pharma.inno@example.com
+CUST003,Tech Solutions Ltd,Electronics,SME,techsol@example.com
+CUST004,AgroChem Global,Chemicals,Enterprise,agroglobal@example.com
+CUST005,Retail Giant Corp,Retail,Enterprise,retailgiant@example.com
+CUST006,Small Parts Assemblers,Manufacturing,SME,spa@example.com
+CUST007,MediSupply Distributors,Healthcare,SME,medisupply@example.com
+CUST008,AutoFab Industries,Automotive,Enterprise,autofab@example.com
+CUST009,Food Processors Inc,Food & Beverage,SME,foodproc@example.com
+CUST010,Defense Systems Group,Defense,Enterprise,dsg@example.com
+CUST011,Future Robotics,Manufacturing,Enterprise,futurerobotics@example.com
+CUST012,Electro Components,Electronics,SME,electrocomp@example.com
+CUST013,Green Chemicals,Chemicals,SME,greenchem@example.com
+CUST014,Biotech Pharma,Pharmaceuticals,Enterprise,biotechp@example.com
+CUST015,Consolidated Logistics,Logistics,SME,conlog@example.com
+CUST016,Precision Engineering,Manufacturing,SME,precisioneng@example.com
+CUST017,Digital Innovations,Technology,Enterprise,diginnov@example.com
+CUST018,Energy Solutions,Energy,SME,energysol@example.com
+CUST019,Textile Mills,Textile,SME,textilemills@example.com
+CUST020,Construction Materials Inc,Construction,Enterprise,constmat@example.com
+CUST021,XYZ Pharmaceuticals,Pharmaceuticals,Enterprise,xyzpharma@example.com
+CUST022,ABC Electronics,Electronics,SME,abcelec@example.com
+CUST023,PQR Manufacturing,Manufacturing,Enterprise,pqrmanuf@example.com
+CUST024,LMN Chemicals,Chemicals,SME,lmnchem@example.com
+CUST025,RST Automotive,Automotive,Enterprise,rstauto@example.com
+CUST026,EFG Retail,Retail,SME,efgretail@example.com
+CUST027,HIJ Healthcare,Healthcare,Enterprise,hijhealth@example.com
+CUST028,KLM Food,Food & Beverage,SME,klmfood@example.com
+CUST029,NOP Defense,Defense,Enterprise,nopdef@example.com
+CUST030,QRS Technology,Technology,SME,qrstech@example.com
+CUST031,UVW Energy,Energy,Enterprise,uvwenergy@example.com
+CUST032,ZXC Construction,Construction,SME,zxcconst@example.com
+CUST033,ASD Textiles,Textile,Enterprise,asdtextiles@example.com
+CUST034,FGH Agro,Chemicals,SME,fghagro@example.com
+CUST035,JKL Robotics,Manufacturing,Enterprise,jklrobo@example.com
+CUST036,MNO Pharma,Pharmaceuticals,SME,mnopharma@example.com
+CUST037,PQR Components,Electronics,Enterprise,pqrcomp@example.com
+CUST038,STU Logistics,Logistics,SME,stulog@example.com
+CUST039,VWX Engineering,Manufacturing,Enterprise,vwxeng@example.com
+CUST040,YZA Digital,Technology,SME,yzadigital@example.com
+CUST041,BCD Solutions,Energy,Enterprise,bcdsol@example.com
+CUST042,EFG Materials,Construction,SME,efgmat@example.com
+CUST043,HIJ Clothing,Textile,Enterprise,hijclothing@example.com
+CUST044,KLM Biotech,Pharmaceuticals,SME,klmbiotech@example.com
+CUST045,NOP Automation,Manufacturing,Enterprise,nopauto@example.com
+CUST046,QRS Electric,Electronics,SME,qrselectric@example.com
+CUST047,STU Chemicals,Chemicals,Enterprise,stuchems@example.com
+CUST048,VWX Health,Healthcare,SME,vwxhealth@example.com
+CUST049,YZA Food,Food & Beverage,Enterprise,yzafood@example.com
+CUST050,BCD Aerospace,Aerospace,Enterprise,bcdaero@example.com
