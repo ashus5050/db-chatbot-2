@@ -7,7 +7,8 @@ import json
 import duckdb
 import pandas as pd
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_chroma import Chroma
+#from langchain_chroma import Chroma
+from langchain.vectorstores import FAISS
 from langchain_core.output_parsers import JsonOutputParser
 from langchain.schema import Document
 from langchain_core.example_selectors import SemanticSimilarityExampleSelector
@@ -17,6 +18,24 @@ from langchain_core.example_selectors import SemanticSimilarityExampleSelector
 OPENAI_API_KEY = st.text_input("Your API Token", type="password")
 embedding = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 
+def load_metadata(metadata_path):
+    
+    f = open(metadata_path)
+    metadata_json = json.load(f)
+    f.close()
+    
+    result_lines = []
+    for table_name, table_info in metadata_json.items():
+        table_desc = table_info.get("table_description", "")
+        columns = table_info.get("columns", [])
+        for col in columns:
+            col_name = col.get("name", "")
+            col_desc = col.get("column_description", "")
+            col_dtype = col.get("data_type", "")
+            result_lines.append(Document(page_content=f"Table: '{table_name}', Table Description: '{table_desc}', Column: '{col_name}', Column Description: '{col_desc}', Column Data Type: '{col_dtype}'",\
+                                         metadata={"table": table_name, "column": col_name}))
+    return result_lines
+    
 # Only proceed if API token is provided
 if OPENAI_API_KEY:
 
@@ -54,11 +73,14 @@ if OPENAI_API_KEY:
     st.write("")
 
     
-    table_metadata_vectordb = Chroma(embedding_function=embedding, persist_directory="vectordb/table_metadata")
+    metadata_path = "metadata/metadata_v1.json"
+    docs = load_metadata(metadata_path)
+
+    # Create FAISS vectorstore in-memory from documents and embeddings
+    table_metadata_vectordb = FAISS.from_documents(docs, embedding)
     
     ###################################################
     
-    metadata_path = "metadata/metadata_v1.json"
     
     f = open(metadata_path)
     metadata_json = json.load(f)
@@ -72,11 +94,16 @@ if OPENAI_API_KEY:
     
     ###################################################
     
-    persist_directory = "vectordb/good_known_queries"
+    df = pd.read_csv(good_known_queries_21_)
     
-    good_known_queries_vectordb = Chroma(persist_directory=persist_directory,embedding_function=embedding)
+    good_known_queries = df[['question', 'sql_query']].to_dict('records')
     
-    good_known_queries_selector = SemanticSimilarityExampleSelector(vectorstore=good_known_queries_vectordb,k=5)
+    good_known_queries_selector = SemanticSimilarityExampleSelector.from_examples(
+        good_known_queries,
+        embedding,
+        vectorstore_cls=FAISS,
+        k=5
+    )
     
     ###################################################
     
@@ -266,3 +293,4 @@ if OPENAI_API_KEY:
 
 else:
     st.warning("Please enter your API token to continue.")
+
