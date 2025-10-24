@@ -8,7 +8,7 @@ import duckdb
 import pandas as pd
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 #from langchain_chroma import Chroma
-from langchain.vectorstores import FAISS
+from langchain.vectorstores.faiss import FAISS
 from langchain_core.output_parsers import JsonOutputParser
 from langchain.schema import Document
 from langchain_core.example_selectors import SemanticSimilarityExampleSelector
@@ -294,6 +294,7 @@ if OPENAI_API_KEY:
 
 else:
     st.warning("Please enter your API token to continue.")
+
 
 
 
