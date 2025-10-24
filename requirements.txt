@@ -2,6 +2,7 @@ streamlit
 duckdb
 langchain_openai
 faiss-cpu
+faiss
 langchain_core
 langchain
 langchain-community
