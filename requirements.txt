@@ -5,4 +5,3 @@ faiss-cpu
 langchain_core
 langchain
 langchain-community
-langchain.vectorstores
